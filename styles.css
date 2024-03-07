@@ -1,25 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu cá nhân</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Chào mừng đến với trang giới thiệu của tôi</h1>
-            <div class="avatar">
-                <img src="avatar.jpg" alt="Avatar">
-                <h2>Nguyễn Văn A</h2>
-                <p>Web Developer</p>
-            </div>
-        </header>
-        <section>
-            <h2>Giới thiệu</h2>
-            <p>Xin chào! Tôi là Nguyễn Văn A, một lập trình viên web. Tôi đam mê sáng tạo và phát triển ứng dụng web.</p>
-        </section>
-    </div>
-</body>
-</html>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e09, #d0e);
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.main-content {
+    padding: 20px;
+}
+.introduction {
+    text-align: center;
+}
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    margin-top: 20px;
+}
