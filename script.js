@@ -1,6 +1,6 @@
-// Thêm smooth scrolling cho tất cả các liên kết
+// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
@@ -8,14 +8,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Thêm hiệu ứng fade-in khi cuộn trang
-window.addEventListener('scroll', () => {
-    let elements = document.querySelectorAll('.fade-in');
-    elements.forEach(element => {
-        if (element.getBoundingClientRect().top < window.innerHeight) {
-            element.classList.add('visible');
+// Function to highlight navigation links when scrolling
+window.addEventListener('scroll', event => {
+    let navigationLinks = document.querySelectorAll('nav ul li a');
+    let fromTop = window.scrollY;
+
+    navigationLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+
+        if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+        ) {
+            link.classList.add('active');
         } else {
-            element.classList.remove('visible');
+            link.classList.remove('active');
         }
     });
 });
